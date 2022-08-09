@@ -1,0 +1,22 @@
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  justify-content: right;
+  padding: 50px;
+}
+
+.leaflet-container {
+  width: 75%;
+  height: 75vh;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 5px;
+}
+
+.list-container {
+  width: 25%;
+}
+
+
