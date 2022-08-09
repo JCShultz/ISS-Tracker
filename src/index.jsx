@@ -57,8 +57,9 @@ class App extends React.Component {
       body.data.people.forEach((astro)=>{
         if(astro.craft === 'ISS'){
           this.state.issAstros.push(astro.name);
+          this.state.astronauts.push(astro);
         }else{
-          this.state.otherAstros.push(astro);
+          this.state.astronauts.push(astro);
         }
       })
 
@@ -69,14 +70,12 @@ class App extends React.Component {
   }
 
   render(){
-    let { lat, long, issAstros, otherAstros } = this.state;
+    let { lat, long, issAstros, otherAstros, astronauts } = this.state;
 
-    var issIcon = L.icon({
+    let issIcon = L.icon({
       iconUrl: pic,
-      iconSize: [ 60, 60]
+      iconSize: [ 100, 100]
     })
-
-    //public/images/kisspng-international-space-station-space-shuttle-program-space-5ac0cd972b79a4.0453170315225849831781.png
 
     function MyComponent() {
       const map = useMap()
@@ -84,11 +83,14 @@ class App extends React.Component {
     }
 
     return (
+      <div>
+         <div className="clickInfo">click ISS icon view the current crew</div>
       <div className="flex-box">
         <div className="list-container">
-          <h1>ISS Tracker</h1>
+          <div className="title">ISS Tracker</div>
+
           <h3>Current Count of Visitors to the ISS:</h3>
-          <AstroListOther astros={otherAstros}/>
+          <AstroListOther astros={astronauts}/>
         </div>
         <MapContainer className="leaflet-container "center={[51.505, -0.09]} zoom={7} scrollWheelZoom={true}>
           <TileLayer
@@ -102,6 +104,8 @@ class App extends React.Component {
             </Popup>
           </Marker>
         </MapContainer>
+      </div>
+
       </div>
     )
   }

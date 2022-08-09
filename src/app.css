@@ -3,7 +3,8 @@
   flex-direction: row;
   align-items: right;
   justify-content: right;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .leaflet-container {
@@ -17,6 +18,19 @@
 
 .list-container {
   width: 25%;
+  padding-right: 20px;
 }
 
+.astroName {
+  font-size: 20pt;
+}
 
+.clickInfo {
+  padding-left: 500px;
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 25pt;
+  font-weight: bold;
+}
