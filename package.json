@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2",
+    "express": "^4.18.1",
     "leaflet": "^1.8.0",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "react": "^18.2.0",
@@ -27,6 +28,7 @@
   "scripts": {
     "start": "webpack --mode=development",
     "build": "webpack --mode=production",
-    "dev": "webpack serve --open"
+    "dev": "webpack serve --open",
+    "server": "npx nodemon server/index.js"
   }
 }
