@@ -7,6 +7,9 @@ exports.getLocations = (req,res) => {
   axios.get('http://api.open-notify.org/iss-now.json')
   .then((body) => {
     //console.log(body.data)
+    //TODO:
+    //call function to store location in bd
+    //call function to delete entries in db that over the 24hr limit
     res.send(body.data).status(200).end();
   })
   .catch((err) => {

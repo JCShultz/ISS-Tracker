@@ -84,8 +84,10 @@ class App extends React.Component {
           </div>
           <MapContainer className="leaflet-container " center={[51.505, -0.09]} zoom={5} scrollWheelZoom={true}>
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            	attribution= '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy;<a href="https://carto.com/attributions">CARTO</a>'
+              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+              //attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <MyComponent />
             <Marker position={[lat, long]} icon={issIcon}>
@@ -96,11 +98,11 @@ class App extends React.Component {
             <LayerGroup>
               <Circle
                 center={[lat, long]}
-                pathOptions={{ fillColor: 'green' }}
+                pathOptions={{ fillColor: 'rgb(93, 255, 0)' }}
                 radius={500000}
                 stroke={true}
                 weight={10}
-                color={'green'}
+                color={'rgb(93, 255, 0)'}
                 opacity={0.20}
               />
             </LayerGroup>
