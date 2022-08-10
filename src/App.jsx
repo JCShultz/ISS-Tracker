@@ -18,7 +18,7 @@ class App extends React.Component {
       astronauts: [],
       issAstros: [],
       otherAstros: [],
-      allAstros:[],
+      allAstros: [],
       long: 0,
       lat: 0
     };
@@ -69,8 +69,8 @@ class App extends React.Component {
       .then((body) => {
         console.log("client ", body.data)
         body.data.forEach((astro) => {
-          if(astro.name){
-          this.state.allAstros.push(astro.name);
+          if (astro.name) {
+            this.state.allAstros.push(astro.name);
           }
         })
 
@@ -103,7 +103,7 @@ class App extends React.Component {
           </div>
           <MapContainer className="leaflet-container " center={[51.505, -0.09]} zoom={5} scrollWheelZoom={true}>
             <TileLayer
-            	attribution= '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy;<a href="https://carto.com/attributions">CARTO</a>'
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy;<a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             />
             <MyComponent />
@@ -126,22 +126,25 @@ class App extends React.Component {
           </MapContainer>
           <div className="c3">
             <div className="stats">
-            Statistics:
+              Statistics:
             </div>
-            <div>
-            Average Speed: 28000 km/hr
+            <div className="statslist">
+              Average Speed: 28000 km/hr
             </div>
-            <div>
-            Size: 108 meters
+            <div className="statslist">
+              Size: 108 meters
             </div>
-            <div>
-            Average Altitude: 108 meters
+            <div className="statslist">
+              Average Altitude: 108 meters
             </div>
-            <div>
-            Orbits the Earth: 19 times/ day
+            <div className="statslist">
+              Orbits/24hrs: 19
+            </div>
+            <div className="astrosserved">
+              Astronauts Served on the ISS:
             </div>
             <div className="allastros">
-            <AllAstros astros={this.state.allAstros}/>
+              <AllAstros astros={this.state.allAstros} />
             </div>
           </div>
         </div>

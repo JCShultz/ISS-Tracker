@@ -15,7 +15,7 @@
   border-radius: 3px;
   border-color: rgb(101, 101, 101);
   border-width: 8px;
-  box-shadow: rgba(107, 107, 107, 0.35) 0px 5px 15px;
+  box-shadow: rgba(107, 107, 107, 0.35) 5px 5px 10px;
 }
 
 .list-container {
@@ -29,7 +29,8 @@
   border-color: rgb(63, 63, 63);
   border-width: 3px;
   background-color: rgb(13, 13, 13);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 10px;
+  overflow: auto;
 }
 
 .astroName {
@@ -54,10 +55,23 @@
 .title {
   font-size: 24pt;
   font-weight: bold;
+  margin-top: 10px;
+  border-style: solid;
+  border-color: rgb(93, 255, 0);
+  border-radius: 3px;
+  padding-left: 5px;
 }
 
 .stats {
   font-size: 20pt;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+.statslist {
+  font-size: 10pt;
   font-weight: bold;
 }
 
@@ -72,7 +86,7 @@
   border-color: rgb(63, 63, 63);
   border-width: 3px;
   background-color: rgb(13, 13, 13);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 10px;
 }
 
 .background {
@@ -81,14 +95,31 @@
   border-style: solid;
   border-width: 3px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 10px;
 
 }
 
 .allastros {
-  margin-top: 50px;
-  height: 275px;
+  margin-top: 10px;
+  height: 335px;
   overflow: auto;
+}
+
+.astrosserved {
+  padding-top: 40px;
+  font-size: 9pt;;
+}
+
+.currinspac {
+  padding-top: 50px;
+  font-size:10pt;
+  padding-bottom: 10px;
+
+}
+
+.allastroslist {
+  border-style: solid;
+  border-color: white;
 }
 
 @font-face {
@@ -96,4 +127,9 @@
   src: url("./font/FiraMono/Fira Mono Regular Nerd Font Complete.otf") format("otf"),
        url("./font/FiraMono/Fira Mono Regular Nerd Font Complete.otf") format("opentype");
 }
+
+.fs8pt {
+  font-size: 8pt;
+}
+
 

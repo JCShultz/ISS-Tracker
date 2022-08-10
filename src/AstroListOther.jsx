@@ -5,7 +5,7 @@ import './app.css';
 function AstroListOther(props){
     return (
       <div>
-        <h3>People Currently in Space:</h3>
+        <div className="currinspac">Currently in Space:</div>
         {props.astros.map((astro)=>{
           return <div key={Math.random()}>
             <div className="astroName">{astro.name}</div>

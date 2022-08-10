@@ -6,7 +6,7 @@ function AllAstros(props){
     return (
       <div>
         {props.astros.map((astro)=>{
-          return <div key={Math.random()}>{astro}</div>
+          return <div className="astroname" key={Math.random()}>{astro}</div>
         })}
       </div>
     )
