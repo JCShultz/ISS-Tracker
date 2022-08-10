@@ -6,6 +6,7 @@ import { useMap } from 'react-leaflet';
 
 import AstroListISS from './AstroListISS.jsx';
 import AstroListOther from './AstroListOther.jsx';
+import AllAstros from './AllAstros.jsx';
 import './app.css';
 import pic from "./kisspng-international-space-station-space-shuttle-program-space-5ac0cd972b79a4.0453170315225849831781.png";
 
@@ -17,6 +18,7 @@ class App extends React.Component {
       astronauts: [],
       issAstros: [],
       otherAstros: [],
+      allAstros:[],
       long: 0,
       lat: 0
     };
@@ -25,6 +27,7 @@ class App extends React.Component {
   componentDidMount = () => {
     this.fetchLocation();
     this.fetchAstronauts();
+    this.fetchAllAstronauts();
   }
 
   fetchLocation = () => {
@@ -61,6 +64,22 @@ class App extends React.Component {
       })
   }
 
+  fetchAllAstronauts = () => {
+    axios.get('/allastros')
+      .then((body) => {
+        console.log("client ", body.data)
+        body.data.forEach((astro) => {
+          if(astro.name){
+          this.state.allAstros.push(astro.name);
+          }
+        })
+
+      })
+      .catch((err) => {
+        console.log('There was an error in fetching all astronauts: ', err);
+      })
+  }
+
   render() {
     let { lat, long, issAstros, otherAstros, astronauts } = this.state;
 
@@ -86,8 +105,6 @@ class App extends React.Component {
             <TileLayer
             	attribution= '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy;<a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-              //attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <MyComponent />
             <Marker position={[lat, long]} icon={issIcon}>
@@ -122,6 +139,9 @@ class App extends React.Component {
             </div>
             <div>
             Orbits the Earth: 19 times/ day
+            </div>
+            <div className="allastros">
+            <AllAstros astros={this.state.allAstros}/>
             </div>
           </div>
         </div>

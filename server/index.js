@@ -19,6 +19,9 @@ app.get('/location', control.getLocations)
 //handle get req for astronauts data:
 app.get('/astronauts', control.getAstronauts)
 
+//handle get req for all astronauts data:
+app.get('/allastros', control.getAllAstronauts)
+
 
 app.listen(3000);
 console.log("listening at: 3000")

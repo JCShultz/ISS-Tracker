@@ -1,5 +1,4 @@
 //create db schema model and connections here:
-
 //imports:
 const mongoose = require("mongoose");
 

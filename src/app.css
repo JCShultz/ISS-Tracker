@@ -85,6 +85,12 @@
 
 }
 
+.allastros {
+  margin-top: 50px;
+  height: 275px;
+  overflow: auto;
+}
+
 @font-face {
   font-family: 'Fira';
   src: url("./font/FiraMono/Fira Mono Regular Nerd Font Complete.otf") format("otf"),

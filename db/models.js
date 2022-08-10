@@ -1,11 +1,34 @@
 //create models here that interact with the db
 const db = require('./db.js');
+
+
 //TODO:
 
 
-//write a function that creates new entries to the db for locations
+//write a function that creates new entries to the db for astronauts names
 
+let findAstronautAndUpdate = (arrayOfNames) => {
+  //find match and update or create new in db
+  console.log('in model: ', arrayOfNames);
+  arrayOfNames.forEach((astro) => {
+    if (astro.craft === 'ISS') {
+      db.AstronautItem.findOneAndUpdate(
+        {
+          name: astro.name,
+        },
+        {
+          upsert: true,
+        }
+      );
+    }
+  })
+};
 
+let retrieveAllAstronauts = () => {
+  return db.AstronautItem.find()
+};
 
-//write a function that checks the db for entries that are over the 24 hr limit and deletes them
-
+module.exports = {
+  findAstronautAndUpdate,
+  retrieveAllAstronauts
+}
