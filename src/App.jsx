@@ -99,6 +99,8 @@ class App extends React.Component {
         <div className="flex-box">
           <div className="list-container">
             <div className="title">ISS Tracker</div>
+            <div className="fs10pt">longitude: {long}</div>
+            <div className="fs10pt">latitude: {lat}</div>
             <AstroListOther astros={astronauts} />
           </div>
           <MapContainer className="leaflet-container " center={[51.505, -0.09]} zoom={5} scrollWheelZoom={true}>
