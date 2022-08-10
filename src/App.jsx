@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { MapContainer, Marker, Popup, TileLayer, LayerGroup, Circle } from 'react-leaflet';
-//import { Icon } from 'leaflet';
 import L from 'leaflet';
 import { useMap } from 'react-leaflet';
 
@@ -76,13 +75,11 @@ class App extends React.Component {
     }
 
     return (
-      <div>
+      <div className="background">
         <div className="clickInfo">click ISS icon view the current crew</div>
         <div className="flex-box">
           <div className="list-container">
             <div className="title">ISS Tracker</div>
-
-            <h3>Number of Visitors to the ISS:</h3>
             <AstroListOther astros={astronauts} />
           </div>
           <MapContainer className="leaflet-container " center={[51.505, -0.09]} zoom={5} scrollWheelZoom={true}>
@@ -108,8 +105,25 @@ class App extends React.Component {
               />
             </LayerGroup>
           </MapContainer>
+          <div className="c3">
+            <div className="stats">
+            Statistics:
+            </div>
+            <div>
+            Average Speed: 28000 km/hr
+            </div>
+            <div>
+            Size: 108 meters
+            </div>
+            <div>
+            Average Altitude: 108 meters
+            </div>
+            <div>
+            Orbits the Earth: 19 times/ day
+            </div>
+          </div>
         </div>
-
+        <div className="haloInfo">green halo is 1,000,000 meters in diameter</div>
       </div>
     )
   }

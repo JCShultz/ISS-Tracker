@@ -26,7 +26,7 @@
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
-    "start": "webpack --mode=development",
+    "start": "webpack --watch --mode=development",
     "build": "webpack --mode=production",
     "dev": "webpack serve --open",
     "server": "npx nodemon server/index.js"

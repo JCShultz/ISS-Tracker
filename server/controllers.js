@@ -1,7 +1,8 @@
 //create route handlers here:
+
 const axios = require("axios");
 
-
+//api for location:
 exports.getLocations = (req,res) => {
   axios.get('http://api.open-notify.org/iss-now.json')
   .then((body) => {
@@ -14,6 +15,7 @@ exports.getLocations = (req,res) => {
   })
 };
 
+//api call for astronauts:
 exports.getAstronauts = (req,res) => {
   axios.get('http://api.open-notify.org/astros.json')
   .then((body) => {
