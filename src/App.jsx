@@ -80,6 +80,8 @@ class App extends React.Component {
       })
   }
 
+
+
   render() {
     let { lat, long, issAstros, otherAstros, astronauts } = this.state;
 
@@ -109,20 +111,51 @@ class App extends React.Component {
               url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             />
             <MyComponent />
-            <Marker position={[lat, long]} icon={issIcon}>
+            <Marker className="icon" position={[lat, long]} icon={issIcon}>
               <Popup>
                 {"latitude: " + lat + ", longitiude: " + long} <br /> <AstroListISS astros={issAstros} />
               </Popup>
             </Marker>
             <LayerGroup>
               <Circle
+                className="circle4"
                 center={[lat, long]}
-                pathOptions={{ fillColor: 'rgb(93, 255, 0)' }}
+                pathOptions={{ fillColor: 'rgb(116, 255, 35)' }}
                 radius={500000}
                 stroke={true}
                 weight={10}
-                color={'rgb(93, 255, 0)'}
-                opacity={0.20}
+                color={'rgb(116, 255, 35)'}
+                opacity={0.10}
+              />
+              <Circle
+                className="circle2"
+                center={[lat, long]}
+                pathOptions={{ fillColor: 'rgb(116, 255, 35)' }}
+                radius={250000}
+                stroke={true}
+                weight={10}
+                color={'rgb(116, 255, 35)'}
+                opacity={0.10}
+              />
+              <Circle
+                className="circle3"
+                center={[lat, long]}
+                pathOptions={{ fillColor: 'rgb(116, 255, 35)' }}
+                radius={370000}
+                stroke={true}
+                weight={10}
+                color={'rgb(116, 255, 35)'}
+                opacity={0.10}
+              />
+                <Circle
+                className="circle1"
+                center={[lat, long]}
+                pathOptions={{ fillColor: 'rgb(116, 255, 35)' }}
+                radius={130000}
+                stroke={true}
+                weight={10}
+                color={'rgb(116, 255, 35)'}
+                opacity={0.10}
               />
             </LayerGroup>
           </MapContainer>
