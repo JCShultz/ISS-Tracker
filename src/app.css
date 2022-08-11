@@ -40,7 +40,7 @@
   color: rgb(116, 255, 35);
   /* text-shadow: .5px .5px 2px rgb(180, 255, 136); */
   width: 20%;
-
+  height: 35em;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -96,7 +96,7 @@
 
 .leaflet-container {
   width: 50%;
-  height: 85vh;
+  height: 47.5em;
   margin-left: 8px;
   margin-right: 8px;
   border-radius: 3px;
@@ -163,6 +163,7 @@
 
 .c3 {
   width: 20%;
+  height: 33.75em;
   font-family: Fira;
   color: rgb(116, 255, 35);
   /* text-shadow: .5px .5px 2px rgb(180, 255, 136); */
