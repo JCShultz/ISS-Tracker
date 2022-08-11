@@ -42,14 +42,14 @@
 }
 
 .clickInfo {
-  padding-left: 530px;
+  padding-left: 600px;
   padding-top: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .haloInfo {
   padding-left: 520px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .title {
@@ -106,8 +106,8 @@
   overflow: auto;
 }
 
+
 .astrosserved {
-  padding-top: 40px;
   font-size: 9pt;;
 }
 
@@ -121,6 +121,11 @@
 .allastroslist {
   border-style: solid;
   border-color: white;
+}
+
+.numberserved {
+  padding-top: 15px;;
+  font-size: 15pt;
 }
 
 @font-face {
@@ -138,3 +143,14 @@
   font-size: 10pt;
 }
 
+::-webkit-scrollbar {
+  width: 1mm;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(29, 80, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(93, 255, 0);
+}

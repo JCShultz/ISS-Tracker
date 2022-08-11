@@ -95,7 +95,7 @@ class App extends React.Component {
 
     return (
       <div className="background">
-        <div className="clickInfo">click ISS icon view the current crew</div>
+        <div className="clickInfo">scroll to zoom</div>
         <div className="flex-box">
           <div className="list-container">
             <div className="title">ISS Tracker</div>
@@ -103,7 +103,7 @@ class App extends React.Component {
             <div className="fs10pt">latitude: {lat}</div>
             <AstroListOther astros={astronauts} />
           </div>
-          <MapContainer className="leaflet-container " center={[51.505, -0.09]} zoom={5} scrollWheelZoom={true}>
+          <MapContainer className="leaflet-container " center={[51.505, -0.09]} zoom={5} scrollWheelZoom={true} zoomControl={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy;<a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -137,13 +137,16 @@ class App extends React.Component {
               Size: 108 meters
             </div>
             <div className="statslist">
-              Average Altitude: 108 meters
+              Average Altitude: 420 km
             </div>
             <div className="statslist">
               Orbits/24hrs: 19
             </div>
+            <div className="numberserved">
+              {this.state.allAstros.length}
+            </div>
             <div className="astrosserved">
-              Astronauts Served on the ISS:
+              Visitors to the ISS:
             </div>
             <div className="allastros">
               <AllAstros astros={this.state.allAstros} />

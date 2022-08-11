@@ -20,7 +20,7 @@ exports.getLocations = (req,res) => {
 exports.getAstronauts = (req,res) => {
   axios.get('http://api.open-notify.org/astros.json')
   .then((body) => {
-    console.log('in server: ', body.data.people)
+    //console.log('in server: ', body.data.people)
     //pass info into function to save name in db
     models.findAstronautAndUpdate(body.data.people)
     res.send(body.data).status(200).end();
@@ -35,7 +35,7 @@ exports.getAstronauts = (req,res) => {
 exports.getAllAstronauts = (req,res) => {
   models.retrieveAllAstronauts()
   .then((body) => {
-    console.log('in server: ', body)
+    //console.log('in server: ', body)
     res.send(body).status(200).end();
   })
   .catch((err) => {

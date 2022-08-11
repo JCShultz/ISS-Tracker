@@ -9,7 +9,7 @@ const db = require('./db.js');
 
 let findAstronautAndUpdate = (arrayOfNames) => {
   //find match and update or create new in db
-  console.log('in model: ', arrayOfNames);
+  //console.log('in model: ', arrayOfNames);
   arrayOfNames.forEach((astro) => {
     if (astro.craft === 'ISS') {
       db.AstronautItem.findOneAndUpdate(
