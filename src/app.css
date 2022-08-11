@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 30px;
+
+
 }
 
 .background {
@@ -37,7 +39,7 @@
   font-family: Fira;
   color: rgb(116, 255, 35);
   /* text-shadow: .5px .5px 2px rgb(180, 255, 136); */
-  width: 18%;
+  width: 20%;
 
   padding-left: 20px;
   padding-right: 20px;
@@ -94,7 +96,7 @@
 
 .leaflet-container {
   width: 50%;
-  height: 75vh;
+  height: 85vh;
   margin-left: 8px;
   margin-right: 8px;
   border-radius: 3px;
@@ -160,13 +162,14 @@
 /*COLUMN THREE*/
 
 .c3 {
-  width: 18%;
+  width: 20%;
   font-family: Fira;
   color: rgb(116, 255, 35);
   /* text-shadow: .5px .5px 2px rgb(180, 255, 136); */
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
+  padding-bottom: 20px;
   border-radius: 3px;
   border-color: rgb(63, 63, 63);
   border-width: 3px;
