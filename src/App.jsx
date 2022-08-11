@@ -97,7 +97,6 @@ class App extends React.Component {
 
     return (
       <div className="background">
-        <div className="clickInfo">scroll to zoom</div>
         <div className="flex-box">
           <div className="list-container">
             <div className="title">ISS Tracker</div>
@@ -186,7 +185,6 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-        <div className="haloInfo">green halo is 1,000,000 meters in diameter</div>
       </div>
     )
   }
